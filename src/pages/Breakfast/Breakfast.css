@@ -1,0 +1,10 @@
+
+.breakfast{
+    background-color:rgba(179, 235, 179, 0.1);
+    border-radius: 5px;
+}
+.breakfast:hover{
+    box-shadow: 2px 5px 30px 0px gray;
+    border-radius: 10px;
+    background-color: rgba(179, 235, 179, 0.2);
+}

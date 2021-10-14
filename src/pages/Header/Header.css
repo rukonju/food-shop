@@ -1,0 +1,28 @@
+.links{
+    display: flex;
+    align-items: center;
+}
+.links a{
+    text-decoration: none;
+    color: gray;
+    line-height: 65.6px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+.links a:active,.links a:hover{
+    color: green
+    
+}
+.nav-btn button{
+    margin-right: 10px;
+    outline: none;
+}
+.nav-btn button:focus{
+    
+    box-shadow: none;
+}
+.nav-btn button:active{
+    box-shadow: none;
+}
+
