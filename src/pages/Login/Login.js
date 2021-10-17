@@ -2,10 +2,22 @@ import React from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Facebook, Google } from 'react-bootstrap-icons';
 import { useForm } from 'react-hook-form';
-import { NavLink } from 'react-router-dom';
+import { NavLink,useHistory,useLocation } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+
 
 
 const Login = () => {
+    const {googleSignUp}=useAuth();
+    const history=useHistory()
+    const location=useLocation()
+    const redirect_url=location.state?.from || "/home"
+    const handleGoogleSignUp=()=>{
+            googleSignUp()
+            .then(() => {
+                history.push(redirect_url);
+            })
+        }
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
@@ -46,7 +58,7 @@ const Login = () => {
                 </h1>
             </div>
             <div className="mb-5">
-                <Button style={{fontSize:"24px"}} className="me-2"> <Google/> Sign in with google</Button>
+                <Button onClick={handleGoogleSignUp} style={{fontSize:"24px"}} className="me-2"> <Google/> Sign in with google</Button>
                 <Button style={{fontSize:"24px"}}> <Facebook/> Sign in with facebook</Button>
             </div>
         </Container>

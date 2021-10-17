@@ -5,7 +5,8 @@ import Veg from '../Veg/Veg';
 
 const Vegetable = () => {
     const {vegetable}=useFoods();
-    return (
+ 
+        return (
         <div>
             <Row style={{backgroundColor:"rgba(0,128,0,0.4)", justifyContent:"center", alignItems:"center"}}>
                 <Col>
@@ -20,12 +21,12 @@ const Vegetable = () => {
                 <Row xs={2} md={3} lg={3} >
                     {   
                         vegetable?.map(veg=><Veg key={veg.id} veg={veg}></Veg>)
-
                     }
                 </Row>
             </Container>
         </div>
     );
+    
 };
 
 export default Vegetable;

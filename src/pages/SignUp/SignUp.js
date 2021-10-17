@@ -3,11 +3,19 @@ import { Button, Container, Form } from 'react-bootstrap';
 import { Facebook, Google } from 'react-bootstrap-icons';
 import { useForm } from 'react-hook-form';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+
 
 const SignUp = () => {
 
+    const {googleSignUp}=useAuth();
+
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
+
+    const handleGoogleSignUp=()=>{
+        googleSignUp()
+    }
 
     return (
         <Container style={{width:"50%"}}>
@@ -50,7 +58,7 @@ const SignUp = () => {
                 </h1>
             </div>
             <div className="mb-5">
-                <Button style={{fontSize:"24px"}} className="me-2"> <Google/> Sign up with google</Button>
+                <Button onClick={handleGoogleSignUp} style={{fontSize:"24px"}} className="me-2"> <Google/> Sign up with google</Button>
                 <Button style={{fontSize:"24px"}}> <Facebook/> Sign up with facebook</Button>
             </div>
         </Container>

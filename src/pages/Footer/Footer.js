@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Facebook, Youtube, Twitter, Shop, ShopWindow } from 'react-bootstrap-icons';
+import { Facebook, Youtube, Twitter } from 'react-bootstrap-icons';
 import { Link as Navlink } from "react-router-dom";
 
 const Footer = () => {
@@ -16,8 +16,6 @@ const Footer = () => {
               <Col sm={3}>
                 <div className="my-4" >
                     <div className="mb-4">
-                        <ShopWindow/>
-                        <Shop/>
                       <Facebook className="me-4" color="white" size={24}/> 
                       <Youtube className="me-4" color="white" size={24}/>
                       <Twitter className="me-4" color="white" size={24}/>

@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react' 
 const useFoods=()=>{
     const [foods, setFoods]=useState([]);
+
     useEffect(()=>{
-        fetch('./foods.json')
+        fetch('/foods.json')
         .then(res=>res.json())
         .then(data=>setFoods(data))
     },[]);
@@ -12,6 +13,7 @@ const useFoods=()=>{
     const dinners=foods?.filter(food=>food.catagory==="dinner");
     const vegetable=foods?.filter(food=>food.catagory==="vegetable");
     return {
+        foods,
         breakfasts,
         lunches,
         dinners,

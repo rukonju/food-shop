@@ -5,3 +5,19 @@
     right: 30%;
     z-index: 2;
 }
+.food-type h3{
+    cursor: pointer;
+    padding-bottom: 10px;
+
+}
+
+.food-type h3:hover{
+    color: green;
+}
+
+
+.active-food-type{
+    color: green;
+    border-bottom: 5px solid green;
+    border-radius: 5px;
+}

@@ -5,7 +5,7 @@
 .links a{
     text-decoration: none;
     color: gray;
-    line-height: 65.6px;
+    line-height: 60px;
     font-size: 20px;
     font-weight: 500;
     margin-right: 20px;
@@ -24,5 +24,11 @@
 }
 .nav-btn button:active{
     box-shadow: none;
+}
+.nav-style{
+    background-color: rgb(206, 175, 128);
+}
+.background-style{
+    background-color:rgb(218, 147, 90) ;
 }
 
